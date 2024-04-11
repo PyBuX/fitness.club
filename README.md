@@ -1,2 +1,2 @@
-# fitness.club
+# Fitness Club
  
