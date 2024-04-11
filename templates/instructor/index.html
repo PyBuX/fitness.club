@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "instructors" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "instructors" %}</h2>
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>																	
+				<tr>
+					<td>
+						<p>{% trans "full_name" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+	</form>
+</div>
+<hr>
+<p><a href="{% url 'instructor_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if instructor.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "full_name" %}</p></th>
+				<th><p>{% trans "sex" %}</p></th>
+				<th><p>{% trans "phone" %}</p></th>
+				<th><p>{% trans "user" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in instructor %}
+			<tr>
+				<td>
+					<p>{{ e.full_name }}</p>					
+				</td>	
+				<td><p>{{ e.sex }}</p></td>	
+				<td><p>{{ e.phone }}</p></td>	
+				<td><p>{{ e.user }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'instructor_edit' e.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'instructor_read' e.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'instructor_delete' e.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

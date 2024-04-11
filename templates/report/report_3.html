@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row">
+	<h1>{% trans "report_3" %}</h1>
+</div>
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div style="margin-top:10px">
+		<p>{% trans "Date range" %}:		
+			<input type="date" value="{{start_date}}" name ="start_date" id ="start_date">
+			<input type="date" value="{{finish_date}}" name = "finish_date" id ="finish_date">
+		</p>
+	</div>
+	<div class="row" style="margin-top:10px">
+		<button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Go" %}</button>
+		<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button>
+	</div>
+</form>
+<hr>
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "start_date" %}</p></th>
+				<th><p>{% trans "finish_date" %}</p></th>
+				<th><p>{% trans "hall" %}</p></th>
+				<th><p>{% trans "kind" %}</p></th>
+				<th><p>{% trans "party" %}</p></th>
+				<th><p>{% trans "client" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for r in report %}
+			<tr>
+				<td><p>{{ r.start_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ r.finish_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ r.hall }}</p></td>	
+				<td><p>{{ r.kind }}</p></td>	
+				<td><p>{{ r.party }}</p></td>	
+				<td><p>{{ r.full_name }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>		
+<div class="div-button-center">
+	<a class="btn btn-outline-info" style="width:120px" href="{% url 'index' %}">{% trans "Back" %}</a> 	
+</div>	
+
+{% endblock content %}

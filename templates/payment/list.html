@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "payments" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "payments" %}</h2>
+{% if payment.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "payment_date" %}</p></th>
+				<th><p>{% trans "party" %}</p></th>
+				<th><p>{% trans "client" %}</p></th>
+				<th><p>{% trans "amount" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in payment %}
+			<tr>
+				<td><p>{{ e.payment_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.party }}</p></td>	
+				<td><p>{{ e.client }}</p></td>	
+				<td><p>{{ e.amount }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

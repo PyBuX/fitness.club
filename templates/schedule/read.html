@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "schedule" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<h4>{{ schedule.doctor }}</h4>			
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "start_date" %}: </strong>{{ schedule.start_date | date:"d.m.Y H:i"  }}</p>			
+			<p><strong>{% trans "finish_date" %}: </strong>{{ schedule.finish_date | date:"d.m.Y H:i"  }}</p>			
+			<p><strong>{% trans "hall" %}: </strong>{{ schedule.hall }}</p>			
+			<p><strong>{% trans "kind" %}: </strong>{{ schedule.kind }}</p>			
+			<p><strong>{% trans "party" %}: </strong>{{ schedule.party }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'schedule_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

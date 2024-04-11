@@ -1,0 +1,289 @@
+/* Переменные */
+:root {	
+	/* Основные цвета */	
+	/* Основные цвета */
+	--navbar-background-color:  DeepSkyBlue;
+	--navbar-text-color: MidnightBlue;
+	--main-background-color-light: LightCyan;
+	--main-background-color-dark:  DeepSkyBlue;
+	--main-text-color: DarkBlue;
+	--main-header-color: DarkBlue;
+	--main-text-attention-color: Purple;
+	--footer-background-color-light: LightCyan;
+	--footer-background-color-dark:  Aquamarine;
+	--footer-text-color: Teal;
+	--card-background-color-light: LightCyan;
+	--card-background-color-dark:  DeepSkyBlue;
+	--card-text-color: SeaGreen;
+	--table-background-color-light: LightCyan; 
+	--table-background-color-dark: #F5F5F5; 
+	--table-text-color: DarkBlue;	
+	/* Звездочки в оценке */
+	--star-size: 30px;
+	--star-color: LightYellow;
+	--star-background: Yellow ;
+}
+
+/*  Навигационное меню */
+.navbar {
+	background-color: var(--navbar-background-color);		
+	color: var(--navbar-text-color);
+}
+.navbar .navbar-nav,
+.navbar .navbar-nav .navbar-text {
+	color: var(--navbar-text-color);
+}
+.navbar ul {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
+}
+.navbar li {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
+}
+.navbar a {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);	
+}
+.navbar-brand {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);	
+}
+.navbar-brand a {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
+	font-weight: bold;
+	font-size: 1.875em;
+}
+.nav-link a {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);	
+}
+.nav-link a:hover {
+    background-color: var(--main-background-color)
+    text-decoration: underline; /* Добавляем подчёркивание */
+}
+
+.nav-item {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
+	font-weight: bold;
+}
+/* Основная часть */
+body {
+	background-color: var(--main-background-color-light);  	
+}
+h1, h2, h3, h4, h5, h6 {	
+	color: var(--main-header-color);	
+}
+p, ul, li, label {	
+	color: var(--main-text-color);	
+}
+pre {
+	color:  var(--main-header-color);	
+	display: inline; 
+	line-height: 10px; 
+	width: 100%
+}
+
+.control-label, .control-group{	
+	color: var(--main-text-color);
+}
+
+/*  Карточки */
+.card {	
+	background-color: var(--card-background-color-light);
+	color: var(--card-text-color);	
+	margin-top: 5px;
+	padding: 10px;
+}
+.card-header {	
+	background-image: linear-gradient(top, var(--card-background-color-dark), var(--card-background-color-light));
+	background-image: -o-linear-gradient(top, var(--card-background-color-dark), var(--card-background-color-light));
+    background-image: -moz-linear-gradient(top, var(--card-background-color-dark), var(--card-background-color-light));
+    background-image: -webkit-linear-gradient(top, var(--card-background-color-dark), var(--card-background-color-light));	
+	color: var(--card-text-color);	
+	padding: 10px;	
+}
+.card-body {	
+	background-color: var(--card-background-color-light);
+	color: var(--card-text-color);	
+	padding: 10px;	
+}
+.card-footer {	
+	background-image: linear-gradient(top, var(--card-background-color-light), var(--card-background-color-dark));
+	background-image: -o-linear-gradient(top, var(--card-background-color-light), var(--card-background-color-dark));
+    background-image: -moz-linear-gradient(top, var(--card-background-color-light), var(--card-background-color-dark));
+    background-image: -webkit-linear-gradient(top, var(--card-background-color-light), var(--card-background-color-dark));	
+	color: var(--card-text-color);	
+	padding: 10px;	
+}
+/* Кнопки слева*/
+.div-button-left {
+  text-align: left; 
+  padding: 10px;
+}
+/* Кнопки в центре*/
+.div-button-center {
+  text-align: center; 
+  padding: 10px;
+}
+/* Кнопки справа*/
+.div-button-right {
+  text-align: right; 
+  padding: 10px;
+}
+/* Изображение в центре */
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 100%;
+}
+/* Изображение в центре */
+.img-center2 {
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  padding: 5px;
+  width: 100%;
+}
+/* Изображение в центре */
+.img-center3 {
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  padding: 5px;
+  height: 75%;
+  width: 75%;
+}
+.img-center4 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  height: 50%;
+  width: 50%;
+}
+.div-width-100-text-center {
+  background-color: var(--navbar-background-color); 
+  color: Gold;		 
+  text-align: center; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.div-width-100-text-center h1{
+  color: Gold;		   
+}
+.div-width-100-text-center h3{
+  color: Gold;		   
+}
+
+/* Таблица для менеджера (в закрытой части сайта)*/
+.table-manager {	
+	background-color: var(--main-background-color-light);	
+	width: 100%;
+}
+.table-manager tbody{	
+	background-color: var(--main-background-color-light);	
+	border: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.table-manager thead th {
+	/* background-color: var(--main-background-color-dark);				 */
+	color: var(--main-text-color);
+	font-weight: bold;
+	text-align: left;
+	padding: 10px;
+	background-image: linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
+	background-image: -o-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
+    background-image: -moz-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
+    background-image: -webkit-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
+}
+.table-manager thead tr th:first-child {
+	border-radius: 2px 0 0 2px;
+}
+.table-manager thead tr th:last-child {
+	border-radius: 0 2px 2px 0;
+}
+.table-manager tbody td {
+	text-align: left;
+	border: none;
+	padding: 5px 5px;
+	vertical-align: top;
+}
+.table-manager tbody tr:nth-child(odd){
+	background: var(--table-background-color-light);
+}
+.table-manager tbody tr:nth-child(even){
+	background: var(--table-background-color-dark);
+}
+.table-manager tbody tr td:first-child {
+	border-radius: 2px 0 0 2px;
+}
+.table-manager tbody tr td:last-child {
+	border-radius: 0 2px 2px 0;
+}
+
+/* footer */
+footer{
+	background-image: linear-gradient(top, var(--footer-background-color-dark), var(--footer-background-color-light));
+	background-image: -o-linear-gradient(top, var(--footer-background-color-dark), var(--footer-background-color-light));
+    background-image: -moz-linear-gradient(top, var(--footer-background-color-dark), var(--footer-background-color-light));
+    background-image: -webkit-linear-gradient(top, var(--footer-background-color-dark), var(--footer-background-color-light));
+    margin-top: 10px;
+	padding: 10px;
+}
+.footer-area h1, .footer-areah2, .footer-area h3, .footer-area h4, .footer-area h5, .footer-area h6 {
+    color: var(--footer-text-color);
+	text-align: center; 
+}
+.footer-area p{
+    color: var(--footer-text-color);	
+}
+.footer-area img {
+  height: 200px; 
+  max-width: 200px;
+  margin: auto;
+  display: block;
+  padding: 5px;
+}
+footer h5{
+    color: var(--footer-text-color);	
+}
+footer p{
+    color: var(--footer-text-color);	
+}
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+/* Set a specific color for each brand */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-instagram {
+  background: #f09433;
+  color: white;
+}
+.fa-vk {
+  background: #45bbff;
+  color: white;
+}
+.fa-telegram {
+  background: #45bbff;
+  color: white;
+}

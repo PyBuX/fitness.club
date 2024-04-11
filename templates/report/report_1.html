@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row">
+	<h1>{% trans "report_1" %}</h1>
+</div>
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "full_name" %}</p></th>
+				<th><p>{% trans "kind_title" %}</p></th>
+				<th><p>{% trans "val" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for r in report %}
+			<tr>
+				<td><p>{{ r.full_name }}</p></td>	
+				<td><p>{{ r.kind_title }}</p></td>	
+				<td><p>{{ r.val }}</p></td>									
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>		
+<div class="div-button-center">
+	<a class="btn btn-outline-info" style="width:120px" href="{% url 'index' %}">{% trans "Back" %}</a> 	
+</div>	
+
+{% endblock content %}

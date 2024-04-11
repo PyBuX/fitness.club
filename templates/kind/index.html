@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "kinds" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "kinds" %}</h2>
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>																	
+				<tr>
+					<td>
+						<p>{% trans "kind_title" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+	</form>
+</div>
+<hr>
+<p><a href="{% url 'kind_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if kind.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "kind_title" %}</p></th>
+				<th><p>{% trans "kind_price" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in kind %}
+			<tr>
+				<td><p>{{ e.kind_title }}</p></td>	
+				<td><p>{{ e.price }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'kind_edit' e.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'kind_read' e.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'kind_delete' e.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

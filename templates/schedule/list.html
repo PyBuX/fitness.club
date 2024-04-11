@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "schedules" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "schedules" %}</h2>
+{% if schedule.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "start_date" %}</p></th>
+				<th><p>{% trans "finish_date" %}</p></th>
+				<th><p>{% trans "hall" %}</p></th>
+				<th><p>{% trans "kind" %}</p></th>
+				<th><p>{% trans "party" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in schedule %}
+			<tr>
+				<td><p>{{ e.start_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.finish_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.hall }}</p></td>	
+				<td><p>{{ e.kind }}</p></td>	
+				<td><p>{{ e.party }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

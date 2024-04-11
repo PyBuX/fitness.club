@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "schedule_instructors" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "schedule_instructors" %}</h2>
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>																	
+				<tr>
+					<td>
+						<p>{% trans "party" %}, {% trans "instructor" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+	</form>
+</div>
+<hr>
+<p><a href="{% url 'schedule_instructor_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if schedule_instructor.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "start_date" %}</p></th>
+				<th><p>{% trans "finish_date" %}</p></th>
+				<th><p>{% trans "hall" %}</p></th>
+				<th><p>{% trans "kind" %}</p></th>
+				<th><p>{% trans "party" %}</p></th>
+				<th><p>{% trans "instructor" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in schedule_instructor %}
+			<tr>
+				<td><p>{{ e.schedule.start_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.schedule.finish_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.schedule.hall }}</p></td>	
+				<td><p>{{ e.schedule.kind }}</p></td>	
+				<td><p>{{ e.schedule.party }}</p></td>	
+				<td><p>{{ e.instructor.full_name }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'schedule_instructor_edit' e.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'schedule_instructor_read' e.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'schedule_instructor_delete' e.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

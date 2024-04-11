@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "client" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<h4>{{ client.full_name }}</h4>			
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "birthday" %}: </strong>{{ client.birthday | date:"d.m.Y"  }}</p>			
+			<p><strong>{% trans "sex" %}: </strong>{{ client.sex }}</p>			
+			<p><strong>{% trans "phone" %}: </strong>{{ client.phone }}</p>			
+			<p><strong>{% trans "card_title" %}: </strong>{{ client.card }}</p>						
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'client_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

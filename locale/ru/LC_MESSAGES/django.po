@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-09 10:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\club\forms.py:39 .\club\models.py:29 .\templates\card\index.html:13
+#: .\templates\card\index.html:37 .\templates\card\read.html:11
+#: .\templates\client\index.html:41 .\templates\client\list.html:15
+#: .\templates\client\read.html:15
+msgid "card_title"
+msgstr "Название карты"
+
+#: .\club\forms.py:47
+msgid "Minimum age 16 years old"
+msgstr "Минимальный возраст 16 лет"
+
+#: .\club\forms.py:49
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты/времени"
+
+#: .\club\forms.py:64 .\templates\instructor\index.html:40
+#: .\templates\instructor\read.html:14
+msgid "user"
+msgstr "Пользователь"
+
+#: .\club\forms.py:86 .\club\forms.py:125 .\club\forms.py:154
+#: .\templates\index.html:63 .\templates\party\create.html:5
+#: .\templates\party\edit.html:5 .\templates\party\read.html:5
+#: .\templates\payment\index.html:38 .\templates\payment\list.html:12
+#: .\templates\payment\read.html:12 .\templates\report\report_2.html:32
+#: .\templates\report\report_3.html:32 .\templates\schedule\index.html:41
+#: .\templates\schedule\list.html:15 .\templates\schedule\read.html:16
+#: .\templates\schedule_instructor\index.html:13
+#: .\templates\schedule_instructor\index.html:41
+#: .\templates\schedule_instructor\read.html:16
+msgid "party"
+msgstr "Группа"
+
+#: .\club\forms.py:87 .\club\forms.py:155 .\templates\client\create.html:5
+#: .\templates\client\edit.html:5 .\templates\client\read.html:5
+#: .\templates\party_members\index.html:13
+#: .\templates\party_members\index.html:38
+#: .\templates\party_members\read.html:12 .\templates\payment\index.html:39
+#: .\templates\payment\list.html:13 .\templates\payment\read.html:13
+#: .\templates\report\report_3.html:33
+msgid "client"
+msgstr "Клиент"
+
+#: .\club\forms.py:123 .\templates\hall\create.html:5
+#: .\templates\hall\edit.html:5 .\templates\hall\read.html:5
+#: .\templates\index.html:62 .\templates\report\report_2.html:30
+#: .\templates\report\report_3.html:30 .\templates\schedule\index.html:39
+#: .\templates\schedule\list.html:13 .\templates\schedule\read.html:14
+#: .\templates\schedule_instructor\index.html:39
+#: .\templates\schedule_instructor\read.html:14
+msgid "hall"
+msgstr "Зал"
+
+#: .\club\forms.py:124 .\templates\index.html:20 .\templates\index.html:61
+#: .\templates\kind\create.html:5 .\templates\kind\edit.html:5
+#: .\templates\kind\read.html:5 .\templates\report\report_2.html:31
+#: .\templates\report\report_3.html:31 .\templates\schedule\index.html:40
+#: .\templates\schedule\list.html:14 .\templates\schedule\read.html:15
+#: .\templates\schedule_instructor\index.html:40
+#: .\templates\schedule_instructor\read.html:15
+msgid "kind"
+msgstr "Вид занятия"
+
+#: .\club\forms.py:138 .\templates\schedule\create.html:5
+#: .\templates\schedule\edit.html:5 .\templates\schedule\read.html:5
+msgid "schedule"
+msgstr "Расписание"
+
+#: .\club\forms.py:139 .\templates\instructor\create.html:5
+#: .\templates\instructor\edit.html:5 .\templates\instructor\read.html:5
+#: .\templates\report\report_2.html:33
+#: .\templates\schedule_instructor\index.html:13
+#: .\templates\schedule_instructor\index.html:42
+msgid "instructor"
+msgstr "Инструктор"
+
+#: .\club\models.py:46 .\club\models.py:71 .\templates\client\index.html:13
+#: .\templates\client\index.html:37 .\templates\client\list.html:11
+#: .\templates\instructor\index.html:13 .\templates\instructor\index.html:37
+#: .\templates\instructor\list.html:13 .\templates\instructor\list.html:35
+#: .\templates\payment\index.html:13 .\templates\report\report_1.html:14
+#: .\templates\schedule\index.html:13
+msgid "full_name"
+msgstr "ФИО"
+
+#: .\club\models.py:47 .\templates\client\index.html:38
+#: .\templates\client\list.html:12 .\templates\client\read.html:12
+msgid "birthday"
+msgstr "Дата рождения"
+
+#: .\club\models.py:48 .\club\models.py:72 .\templates\client\index.html:39
+#: .\templates\client\list.html:13 .\templates\client\read.html:13
+#: .\templates\instructor\index.html:38 .\templates\instructor\list.html:36
+#: .\templates\instructor\read.html:12
+msgid "sex"
+msgstr "Пол (М/Ж)"
+
+#: .\club\models.py:49 .\club\models.py:73 .\templates\client\index.html:40
+#: .\templates\client\list.html:14 .\templates\client\read.html:14
+#: .\templates\instructor\index.html:39 .\templates\instructor\list.html:37
+#: .\templates\instructor\read.html:13
+msgid "phone"
+msgstr "Телефон"
+
+#: .\club\models.py:91 .\templates\index.html:39
+#: .\templates\party\index.html:13 .\templates\party\index.html:37
+#: .\templates\party\read.html:11 .\templates\party_members\index.html:13
+#: .\templates\party_members\index.html:37
+#: .\templates\party_members\read.html:11
+msgid "party_title"
+msgstr "Название группы"
+
+#: .\club\models.py:127 .\templates\kind\index.html:13
+#: .\templates\kind\index.html:37 .\templates\kind\list.html:13
+#: .\templates\kind\list.html:35 .\templates\kind\read.html:11
+#: .\templates\report\report_1.html:15
+msgid "kind_title"
+msgstr "Название вида услуги"
+
+#: .\club\models.py:128 .\templates\kind\index.html:38
+#: .\templates\kind\list.html:36 .\templates\kind\read.html:12
+msgid "kind_price"
+msgstr "Стоимость услуги"
+
+#: .\club\models.py:141 .\templates\hall\index.html:13
+#: .\templates\hall\index.html:37 .\templates\hall\read.html:11
+msgid "hall_title"
+msgstr "Название зала"
+
+#: .\club\models.py:142 .\templates\hall\index.html:38
+#: .\templates\hall\read.html:12
+msgid "equipment"
+msgstr "Оборудование"
+
+#: .\club\models.py:155 .\templates\report\report_2.html:28
+#: .\templates\report\report_3.html:28 .\templates\schedule\index.html:37
+#: .\templates\schedule\list.html:11 .\templates\schedule\read.html:12
+#: .\templates\schedule_instructor\index.html:37
+#: .\templates\schedule_instructor\read.html:12
+msgid "start_date"
+msgstr "Начало занятия"
+
+#: .\club\models.py:156 .\templates\report\report_2.html:29
+#: .\templates\report\report_3.html:29 .\templates\schedule\index.html:38
+#: .\templates\schedule\list.html:12 .\templates\schedule\read.html:13
+#: .\templates\schedule_instructor\index.html:38
+#: .\templates\schedule_instructor\read.html:13
+msgid "finish_date"
+msgstr "Завершение занятия"
+
+#: .\club\models.py:194 .\templates\payment\index.html:37
+#: .\templates\payment\list.html:11 .\templates\payment\read.html:11
+msgid "payment_date"
+msgstr "Дата платежа"
+
+#: .\club\models.py:197
+msgid "payment_amount"
+msgstr "Сумма"
+
+#: .\templates\base.html:38
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:40 .\templates\base.html:54
+#: .\templates\instructor\index.html:3 .\templates\instructor\index.html:5
+#: .\templates\instructor\list.html:3 .\templates\instructor\list.html:5
+msgid "instructors"
+msgstr "Инструкторы"
+
+#: .\templates\base.html:43 .\templates\base.html:57
+#: .\templates\kind\index.html:3 .\templates\kind\index.html:5
+#: .\templates\kind\list.html:3 .\templates\kind\list.html:5
+msgid "kinds"
+msgstr "Виды занятий"
+
+#: .\templates\base.html:52 .\templates\card\index.html:3
+#: .\templates\card\index.html:5
+msgid "cards"
+msgstr "Клубные карты"
+
+#: .\templates\base.html:53 .\templates\client\index.html:3
+#: .\templates\client\index.html:5 .\templates\client\list.html:3
+#: .\templates\client\list.html:5
+msgid "clients"
+msgstr "Клиенты"
+
+#: .\templates\base.html:55 .\templates\party\index.html:3
+#: .\templates\party\index.html:5
+msgid "partys"
+msgstr "Группы"
+
+#: .\templates\base.html:56 .\templates\party_members\create.html:5
+#: .\templates\party_members\edit.html:5 .\templates\party_members\read.html:5
+msgid "party_members"
+msgstr "Члены групп"
+
+#: .\templates\base.html:58 .\templates\hall\index.html:3
+#: .\templates\hall\index.html:5
+msgid "halls"
+msgstr "Залы"
+
+#: .\templates\base.html:59 .\templates\index.html:11
+#: .\templates\schedule\index.html:3 .\templates\schedule\index.html:5
+#: .\templates\schedule\list.html:3 .\templates\schedule\list.html:5
+msgid "schedules"
+msgstr "Расписание"
+
+#: .\templates\base.html:60 .\templates\schedule_instructor\index.html:3
+#: .\templates\schedule_instructor\index.html:5
+msgid "schedule_instructors"
+msgstr "Расписание/инструкторы"
+
+#: .\templates\base.html:61 .\templates\payment\index.html:3
+#: .\templates\payment\index.html:5 .\templates\payment\list.html:3
+#: .\templates\payment\list.html:5
+msgid "payments"
+msgstr "Платежи"
+
+#: .\templates\base.html:63 .\templates\report\report_1.html:8
+msgid "report_1"
+msgstr "Стоимость занятий по каждому клиенту"
+
+#: .\templates\base.html:65 .\templates\report\report_2.html:8
+msgid "report_2"
+msgstr "Мое расписание"
+
+#: .\templates\base.html:66 .\templates\report\report_3.html:8
+msgid "report_3"
+msgstr "Мои клиенты"
+
+#: .\templates\base.html:69
+msgid "My account"
+msgstr "Моя учетная запись"
+
+#: .\templates\base.html:70
+msgid "Change password"
+msgstr "Сменить пароль"
+
+#: .\templates\base.html:72
+msgid "Log out"
+msgstr "Выход"
+
+#: .\templates\base.html:77
+msgid "Log In"
+msgstr "Войти"
+
+#: .\templates\base.html:78
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\templates\card\create.html:3 .\templates\card\index.html:30
+#: .\templates\client\create.html:3 .\templates\client\index.html:30
+#: .\templates\hall\create.html:3 .\templates\hall\index.html:30
+#: .\templates\instructor\create.html:3 .\templates\instructor\index.html:30
+#: .\templates\kind\create.html:3 .\templates\kind\index.html:30
+#: .\templates\party\create.html:3 .\templates\party\index.html:30
+#: .\templates\party_members\create.html:3
+#: .\templates\party_members\index.html:30 .\templates\payment\create.html:3
+#: .\templates\payment\index.html:30 .\templates\schedule\create.html:3
+#: .\templates\schedule\index.html:30
+#: .\templates\schedule_instructor\create.html:3
+#: .\templates\schedule_instructor\index.html:30
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\card\create.html:5 .\templates\card\edit.html:5
+#: .\templates\card\read.html:5
+msgid "card"
+msgstr "Клубная карта"
+
+#: .\templates\card\create.html:12 .\templates\card\edit.html:12
+#: .\templates\client\create.html:12 .\templates\client\edit.html:12
+#: .\templates\hall\create.html:12 .\templates\hall\edit.html:12
+#: .\templates\instructor\create.html:12 .\templates\instructor\edit.html:12
+#: .\templates\kind\create.html:12 .\templates\kind\edit.html:12
+#: .\templates\party\create.html:12 .\templates\party\edit.html:12
+#: .\templates\party_members\create.html:12
+#: .\templates\party_members\edit.html:12 .\templates\payment\create.html:12
+#: .\templates\payment\edit.html:12 .\templates\schedule\create.html:12
+#: .\templates\schedule\edit.html:12
+#: .\templates\schedule_instructor\create.html:12
+#: .\templates\schedule_instructor\edit.html:12
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\card\create.html:13 .\templates\card\edit.html:13
+#: .\templates\card\read.html:18 .\templates\client\create.html:13
+#: .\templates\client\edit.html:13 .\templates\client\read.html:22
+#: .\templates\hall\create.html:13 .\templates\hall\edit.html:13
+#: .\templates\hall\read.html:19 .\templates\instructor\create.html:13
+#: .\templates\instructor\edit.html:13 .\templates\instructor\read.html:21
+#: .\templates\kind\create.html:13 .\templates\kind\edit.html:13
+#: .\templates\kind\read.html:19 .\templates\party\create.html:13
+#: .\templates\party\edit.html:13 .\templates\party\read.html:18
+#: .\templates\party_members\create.html:13
+#: .\templates\party_members\edit.html:13
+#: .\templates\party_members\read.html:19 .\templates\payment\create.html:13
+#: .\templates\payment\edit.html:13 .\templates\payment\read.html:21
+#: .\templates\report\report_1.html:31 .\templates\report\report_2.html:51
+#: .\templates\report\report_3.html:51 .\templates\schedule\create.html:13
+#: .\templates\schedule\edit.html:13 .\templates\schedule\read.html:23
+#: .\templates\schedule_instructor\create.html:13
+#: .\templates\schedule_instructor\edit.html:13
+#: .\templates\schedule_instructor\read.html:23
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\card\edit.html:3 .\templates\card\index.html:47
+#: .\templates\client\edit.html:3 .\templates\client\index.html:57
+#: .\templates\hall\edit.html:3 .\templates\hall\index.html:49
+#: .\templates\instructor\edit.html:3 .\templates\instructor\index.html:55
+#: .\templates\kind\edit.html:3 .\templates\kind\index.html:49
+#: .\templates\party\edit.html:3 .\templates\party\index.html:47
+#: .\templates\party_members\edit.html:3
+#: .\templates\party_members\index.html:49 .\templates\payment\edit.html:3
+#: .\templates\payment\index.html:53 .\templates\schedule\edit.html:3
+#: .\templates\schedule\index.html:55
+#: .\templates\schedule_instructor\edit.html:3
+#: .\templates\schedule_instructor\index.html:57
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\card\index.html:19 .\templates\client\index.html:19
+#: .\templates\hall\index.html:19 .\templates\index.html:48
+#: .\templates\instructor\index.html:19 .\templates\instructor\list.html:19
+#: .\templates\kind\index.html:19 .\templates\kind\list.html:19
+#: .\templates\party\index.html:19 .\templates\party_members\index.html:19
+#: .\templates\payment\index.html:19 .\templates\schedule\index.html:19
+#: .\templates\schedule_instructor\index.html:19
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\card\index.html:22 .\templates\client\index.html:22
+#: .\templates\hall\index.html:22 .\templates\index.html:49
+#: .\templates\instructor\index.html:22 .\templates\instructor\list.html:22
+#: .\templates\kind\index.html:22 .\templates\kind\list.html:22
+#: .\templates\party\index.html:22 .\templates\party_members\index.html:22
+#: .\templates\payment\index.html:22 .\templates\report\report_2.html:20
+#: .\templates\report\report_3.html:20 .\templates\schedule\index.html:22
+#: .\templates\schedule_instructor\index.html:22
+msgid "Reset"
+msgstr "Сброс"
+
+#: .\templates\card\index.html:48 .\templates\card\read.html:3
+#: .\templates\client\index.html:58 .\templates\client\read.html:3
+#: .\templates\hall\index.html:50 .\templates\hall\read.html:3
+#: .\templates\instructor\index.html:56 .\templates\instructor\read.html:3
+#: .\templates\kind\index.html:50 .\templates\kind\read.html:3
+#: .\templates\party\index.html:48 .\templates\party\read.html:3
+#: .\templates\party_members\index.html:50
+#: .\templates\party_members\read.html:3 .\templates\payment\index.html:54
+#: .\templates\payment\read.html:3 .\templates\schedule\index.html:56
+#: .\templates\schedule\read.html:3
+#: .\templates\schedule_instructor\index.html:58
+#: .\templates\schedule_instructor\read.html:3
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\card\index.html:49 .\templates\client\index.html:59
+#: .\templates\hall\index.html:51 .\templates\instructor\index.html:57
+#: .\templates\kind\index.html:51 .\templates\party\index.html:49
+#: .\templates\party_members\index.html:51 .\templates\payment\index.html:55
+#: .\templates\schedule\index.html:57
+#: .\templates\schedule_instructor\index.html:59
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\index.html:4 .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Fitness"
+
+#: .\templates\index.html:60
+msgid "date"
+msgstr "Дата"
+
+#: .\templates\party_members\index.html:3
+#: .\templates\party_members\index.html:5
+msgid "party_memberss"
+msgstr "Члены группы"
+
+#: .\templates\payment\create.html:5 .\templates\payment\edit.html:5
+#: .\templates\payment\read.html:5
+msgid "payment"
+msgstr "Платеж"
+
+#: .\templates\payment\index.html:40 .\templates\payment\list.html:14
+#: .\templates\payment\read.html:14
+msgid "amount"
+msgstr "Сумма"
+
+#: .\templates\report\report_1.html:4 .\templates\report\report_2.html:4
+#: .\templates\report\report_3.html:4
+msgid "Reports"
+msgstr "Отчеты"
+
+#: .\templates\report\report_1.html:16
+msgid "val"
+msgstr "Сумма"
+
+#: .\templates\report\report_2.html:13 .\templates\report\report_3.html:13
+msgid "Date range"
+msgstr "Диапазон дат"
+
+#: .\templates\report\report_2.html:19 .\templates\report\report_3.html:19
+msgid "Go"
+msgstr "Выполнить"
+
+#: .\templates\schedule_instructor\create.html:5
+#: .\templates\schedule_instructor\edit.html:5
+#: .\templates\schedule_instructor\read.html:5
+msgid "schedule_instructor"
+msgstr "Расписание/инструкторы"

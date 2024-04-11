@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App Name" %}{% endblock title %}
+{% block header %}
+
+{% endblock header %}
+{% block content %}
+
+<div class="div-width-100-text-center">
+	<h3>{% trans "schedules" %}</h3>
+</div>
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>													
+				<tr>
+					<td>
+						<p>{% trans "kind" %} &nbsp;</p>
+					</td>
+					<td>
+						<p>
+						<select name="item_kind" class="chosen" style="margin:5px">
+							<option value="-----">-----</option>
+							{% for entry in kind %}
+								{% if entry.kind_title == selected_item_kind %}
+									<option value="{{ entry.kind_title }}" selected="selected">{{ entry.kind_title }}</option>
+								{% else %}
+									<option value="{{ entry.kind_title }}">{{ entry.kind_title }}</option>
+								{% endif %}
+							{% endfor %}
+						</select>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>{% trans "party_title" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+		<div class="row">
+			<button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button>
+			<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button>
+		</div>
+	</form>
+</div>
+<hr>
+
+{% if schedule.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "date" %}</p></th>
+				<th><p>{% trans "kind" %}</p></th>
+				<th><p>{% trans "hall" %}</p></th>
+				<th><p>{% trans "party" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in schedule %}
+			<tr>
+				<td><p>{{ e.start_date | date:"d.m.Y H:i"}}-{{ e.finish_date| date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.kind }}</p></td>	
+				<td><p>{{ e.hall }}</p></td>	
+				<td><p>{{ e.party }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+
+
+{% endblock content %}
+

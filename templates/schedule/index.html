@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "schedules" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "schedules" %}</h2>
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>																	
+				<tr>
+					<td>
+						<p>{% trans "full_name" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+	</form>
+</div>
+<hr>
+<p><a href="{% url 'schedule_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if schedule.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "start_date" %}</p></th>
+				<th><p>{% trans "finish_date" %}</p></th>
+				<th><p>{% trans "hall" %}</p></th>
+				<th><p>{% trans "kind" %}</p></th>
+				<th><p>{% trans "party" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in schedule %}
+			<tr>
+				<td><p>{{ e.start_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.finish_date | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.hall }}</p></td>	
+				<td><p>{{ e.kind }}</p></td>	
+				<td><p>{{ e.party }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'schedule_edit' e.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'schedule_read' e.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'schedule_delete' e.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+
